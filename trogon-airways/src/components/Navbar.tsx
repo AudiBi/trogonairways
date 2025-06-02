@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
 
+import LanguageSwitcher from "./LanguageSwitcher";
+
 export const Navbar = () => {
         const [menuOpen, setMenuOpen] = useState(false);
         return (
@@ -9,22 +11,27 @@ export const Navbar = () => {
                                 <div className="max-w-7xl mx-auto px-4 justify-between">
                                         <div className="flex justify-between items-center h-16">
                                                 {/*Desktop Menu */}
-                                                <Link to={"/"} className="flex items-center justify-center text-white" title="Link to Trogon Airways Homepage">
-                                                        <img className="w-[55px]" src={"/src/assets/trogon-bird-color.svg"} alt="Trogon Bird" />
+                                                <Link to={"/"} className="flex items-center justify-center text-white gap-x-1.5" title="Link to Trogon Airways Homepage">
+                                                        <img className="w-[55px]" src={"/src/assets/logo/trogon-bird-color.svg"} alt="Trogon Bird" />
                                                         TROGON AIRWAYS
                                                 </Link>
-                                                <div className="hidden md:flex items-center space-x-8">
+                                                <div className="hidden md:flex items-center space-x-4 text-gray-300">
                                                         {/* Social Links */}
-                                                        <div className="hiddenjustify-end space-x-4">
+                                                        <div className="hidden justify-end space-x-4">
                                                                 <Link to={"https://x.com/"} className="text-gray-300 hover:text-white">
                                                                         <i className="fa-brands fa-x-twitter" title="Trogon Airways on X"></i>
                                                                 </Link>
                                                         </div>
-                                                        {/* Phone */}
-                                                        <a href="mailto:contact@trogonairways.com" title="Email us">contact@trogonairways.com</a>
+                                                        {/* Contact */}
+                                                        <a href="mailto:administration@trogonairways.com" title="Email us" className=" hover:text-white">
+                                                                <i className="fa-solid fa-envelope pr-2"></i>
+                                                                contact@trogonairways.com
+                                                        </a>
+                                                        <span> | </span>
+                                                        <a href="tel:+50933410404" className=" hover:text-white">
+                                                                <i className="fa-solid fa-phone pr-2"></i> +509 3341 0404
+                                                        </a>
                                                 </div>
-
-
 
 
                                                 {/* Mobile Menu Button */}
