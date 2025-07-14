@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import { HeroSections } from "../components/HeroSections";
 import { Layout } from "../components/Layout";
+import { Link } from "react-router-dom";
 
 export const SupportPage: React.FC = () => {
   const { t } = useTranslation();
@@ -23,7 +24,7 @@ export const SupportPage: React.FC = () => {
         <div className="bg-gray-100 p-5 rounded shadow hover:shadow-md transition">
           <h2 className="text-xl font-semibold text-blue-800 mb-1">{t('faq_title')}</h2>
           <p className="text-gray-600 text-sm mb-1">{t('faq_description')}</p>
-          <a href="/faq" className="text-blue-600 hover:underline text-sm">{t('view_faq_button')}</a>
+          <Link to="/faq" className="text-blue-600 hover:underline text-sm">{t('view_faq_button')}</Link>
         </div>
 
         {/* Live Chat */}

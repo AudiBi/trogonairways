@@ -16,13 +16,6 @@ export function useFaqData() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-//   const categories = useMemo(() => [
-//     { value: 'all', label: t('faq_category_all') },
-//     { value: 'flight_booking', label: t('faq_category_flight') },
-//     { value: 'helicopter', label: t('faq_category_helicopter') },
-//     { value: 'general', label: t('faq_category_general') },
-//   ], [t]);
-
   const categories: { value: Category; label: string }[] = [
     { value: 'all', label: t('faq_category_all') },
     { value: 'flight_booking', label: t('faq_category_flight') },
@@ -31,6 +24,16 @@ export function useFaqData() {
     ];
 
   const faqs: FAQ[] = [
+    {
+      category: 'general',
+      question: t('faq_q_trogon'),
+      answer: t('faq_a_trogon')
+    },
+    {
+      category: 'general',
+      question: t('faq_q_name'),
+      answer: t('faq_a_name')
+    },
     {
       category: 'flight_booking',
       question: t('faq_q_book_flight'),
@@ -43,8 +46,13 @@ export function useFaqData() {
     },
     {
       category: 'flight_booking',
-      question: t('faq_q_cancel_flight'),
-      answer: t('faq_a_cancel_flight')
+      question: t('faq_q_payment'),
+      answer: t('faq_a_payment')
+    },
+    {
+      category: 'flight_booking',
+      question: t('faq_q_baggage'),
+      answer: t('faq_a_baggage')
     },
     {
       category: 'helicopter',
@@ -58,13 +66,38 @@ export function useFaqData() {
     },
     {
       category: 'flight_booking',
+      question: t('faq_q_items'),
+      answer: t('faq_a_items')
+    },
+    {
+      category: 'flight_booking',
       question: t('faq_q_refunds'),
       answer: t('faq_a_refunds')
+    },
+    {
+      category: 'general',
+      question: t('faq_q_routes'),
+      answer: t('faq_a_routes')
     },
     {
       category: 'helicopter',
       question: t('faq_q_pets_helicopter'),
       answer: t('faq_a_pets_helicopter')
+    },
+    {
+      category: 'flight_booking',
+      question: t('faq_q_early'),
+      answer: t('faq_a_early')
+    },
+    {
+      category: 'flight_booking',
+      question: t('faq_q_documents'),
+      answer: t('faq_a_documents')
+    },
+    {
+      category: 'flight_booking',
+      question: t('faq_q_change_flight'),
+      answer: t('faq_a_change_flight')
     },
     {
       category: 'flight_booking',
@@ -77,9 +110,29 @@ export function useFaqData() {
       answer: t('faq_a_need_account')
     },
     {
+      category: 'general',
+      question: t('faq_q_plan'),
+      answer: t('faq_a_plan')
+    },
+    {
       category: 'flight_booking',
-      question: t('faq_q_documents_international'),
-      answer: t('faq_a_documents_international')
+      question: t('faq_q_refunds'),
+      answer: t('faq_a_refunds')
+    },
+     {
+      category: 'flight_booking',
+      question: t('faq_q_accommodate'),
+      answer: t('faq_a_accommodate')
+    },
+     {
+      category: 'flight_booking',
+      question: t('faq_q_travel'),
+      answer: t('faq_a_travel')
+    },
+    {
+      category: 'flight_booking',
+      question: t('faq_q_safety'),
+      answer: t('faq_a_safety')
     },
   ];
 

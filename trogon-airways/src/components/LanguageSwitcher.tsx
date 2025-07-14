@@ -48,7 +48,7 @@ const LanguageSwitcher = () => {
       <div
         ref={innerRef}
         {...innerProps}
-        className="flex items-center p-2 hover:bg-blue-900"
+        className="flex items-center p-2 text-blue-900 hover:bg-blue-900 hover:text-white"
         onMouseDown={innerProps.onMouseDown}
       >
         <img src={data.flag} alt={data.label} className="w-5 h-5 mr-2" />

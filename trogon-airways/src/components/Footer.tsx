@@ -33,32 +33,12 @@ export const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* SUBSCRIBE NEWSLETTER */}
-        <div>
-          <h4 className="text-lg font-semibold mb-4">{t('subscribe')}</h4>
-          <p className="text-sm text-gray-300 mb-2">{t('subscribe_description')}</p>
-          <form onSubmit={(e) => e.preventDefault()} className="flex flex-col space-y-2">
-            <input
-              type="email"
-              required
-              placeholder={t('enter_email')}
-              className="px-3 py-2 rounded text-white focus:outline-none focus:ring-2 focus:white"
-            />
-            <button
-              type="submit"
-              className="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-100 transition"
-            >
-              {t('subscribe')}
-            </button>
-          </form>
-        </div>
-
         {/* CONTACT */}
         <div>
-          <h4 className="text-lg font-semibold mb-4">{t('ontact')}</h4>
+          <h4 className="text-lg font-semibold mb-4">{t('contact')}</h4>
           <p className="text-sm mb-2">
             <i className="fa-solid fa-envelope mr-2"></i>
-            <a href="mailto:contact@trogonairways.com" className="hover:underline">contact@trogonairways.com</a>
+            <Link to="/mailto:contact@trogonairways.com" className="hover:underline">contact@trogonairways.com</Link>
           </p>
           <p className="text-sm mb-2">
             <i className="fa-solid fa-phone mr-2"></i>
@@ -78,6 +58,16 @@ export const Footer: React.FC = () => {
               <i className="fa-brands fa-x-twitter text-lg"></i>
             </a>
           </div>
+        </div>
+
+          {/* LEGAL INFO */}
+        <div>
+          <h4 className="text-lg font-semibold mb-4">{t('legal')}</h4>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/terms" className="hover:text-gray-200">{t('terms_of_service')}</Link></li>
+            <li><Link to="/privacy" className="hover:text-gray-200">{t('privacy_policy')}</Link></li>
+            <li><Link to="/cookies" className="hover:text-gray-200">{t('cookie_policy')}</Link></li>
+          </ul>
         </div>
       </div>
 

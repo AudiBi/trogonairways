@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { HeroSection } from "../components/HeroSection";
 import { Footer } from "../components/Footer";
+import { Link } from 'react-router-dom';
 
 
 interface FlightOffer {
@@ -18,9 +19,9 @@ interface Hotel {
 export const HomePage = () => {
   const { t } = useTranslation();
     const flightOffers: FlightOffer[] = [
-        { destination: "Cap Haitien", price: "$399", image: "/assets/offers/flight.jpg" },
-        { destination: "Cayes", price: "$499", image: "/assets/offers/flight-1.jpg" },
-        { destination: "Port-Au-Prince", price: "$599", image: "/assets/offers/flight-2.jpg" },
+        { destination: "Cap Haitien", price: "$199", image: "/assets/offers/flight.jpg" },
+        { destination: "Cayes", price: "$189", image: "/assets/offers/flight-1.jpg" },
+        { destination: "Port-Au-Prince", price: "$189", image: "/assets/offers/flight-2.jpg" },
     ];
 
     const hotels: Hotel[] = [
@@ -43,7 +44,7 @@ export const HomePage = () => {
       {
         image: '/assets/offers/heli.jpg',
         destination: 'Port-Au-Prince',
-        price: '$180',
+        price: '$200',
       },
     ];
 
@@ -175,21 +176,21 @@ export const HomePage = () => {
                   aria-label="Search FAQs"
                   className="w-full px-4 py-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <button
+                <Link to="/faq"
                   type="submit"
                   aria-label="Submit search"
                   className="flex items-center justify-center px-5 py-3 bg-blue-900 text-white rounded-r-md hover:bg-blue-800 transition"
                 >
                   <i className="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                </button>
+                </Link>
               </div>
             </form>
 
             <div className="mt-8 text-sm text-gray-500">
               {t('still_need_help')}{' '}
-              <a href="/support" className="text-blue-600 hover:underline">
+              <Link to="/support" className="text-blue-600 hover:underline">
                 {t('contact_support_team')}
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -197,5 +198,5 @@ export const HomePage = () => {
 
       <Footer />
         </div>
-    )
+    );
 }
